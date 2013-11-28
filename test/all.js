@@ -19,13 +19,33 @@ function load(index) {
     });
 }
 
-// test('contains term', function(t) {
+test('contains term', function(t) {
 
-//     t.plan(0);
+    var index = createIndex();
 
-// });
+    t.plan(4);
 
-// test('document frequency of term', function(t) {
+    index.containsTerm('cat', function(v) { t.ok(v); });
+    index.containsTerm('why', function(v) { t.ok(v); });
+    index.containsTerm('vroom', function(v) { t.ok(v); });
+    index.containsTerm('buster', function(v) { t.notOk(v); });
+
+});
+
+test('document frequency of term', function(t) {
+
+    var index = createIndex();
+
+    t.plan(4);
+
+    index.documentFrequencyOfTerm('the', function(v) { t.ok(v === 2); });
+    index.documentFrequencyOfTerm('cat', function(v) { t.ok(v === 2); });
+    index.documentFrequencyOfTerm('vroom', function(v) { t.ok(v === 1); });
+    index.documentFrequencyOfTerm('javascript', function(v) { t.ok(v === 0); });
+
+});
+
+// test('', function(t) {
 
 //     t.plan(0);
 
