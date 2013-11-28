@@ -106,6 +106,6 @@ InvertedIndex.prototype.postingsForTerm = function(term, cb) {
     process.nextTick(function() { cb(result); });
 }
 
-module.exports = function() {
-    return new InvertedIndex();
+module.exports = function(options) {
+    return new InvertedIndex(options);
 }
