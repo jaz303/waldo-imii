@@ -21,16 +21,24 @@ Keys:
 
 #### `index.postDocument(doc, terms, cb)`
 
+Add document `doc` containing array of `terms` to the index, calling `cb` when the operation is complete.
+
 #### `index.postDocumentUnsorted(doc, terms, cb)`
 
-Use this method when you're unable to present documents to the index in sorted order. Much slower.
+Same as above, but use this method when you're unable to present documents to the index in sorted order. Much slower.
 
-#### `index.postTerm(doc, terms, cb)`
+#### `index.postTerm(doc, term, cb)`
 
-#### `index.postTermUnsorted(doc, terms, cb)`
+Add a single `term` of document `doc` to the index, calling `cb` when the operation is complete.
 
-Use this method when you're unable to present documents to the index in sorted order. Much slower.
+#### `index.postTermUnsorted(doc, term, cb)`
+
+Same as above, but use this method when you're unable to present documents to the index in sorted order. Much slower.
 
 #### `index.documentFrequencyOfTerm(term, cb)`
 
+Calculate the document fequency of `term` and send it asynchronously to `cb`.
+
 #### `index.postingsForTerm(term, cb)`
+
+Retrieving the postings of `term` and send them asynchronously to `cb`.
