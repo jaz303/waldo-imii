@@ -17,7 +17,7 @@ Create:
 
 Keys:
 
-  * `compareDocument`: function that compares 2 documents and returns -VE/0/+VE values.
+  * `compareDocument`: function that compares 2 documents and returns -VE/0/+VE values. Defaults to a numeric comparison.
 
 #### `index.postDocument(doc, terms, cb)`
 
