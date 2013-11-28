@@ -1,6 +1,6 @@
 {
   "name": "waldo-imii",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "In-memory inverted-index",
   "main": "index.js",
   "scripts": {
