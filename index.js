@@ -35,7 +35,7 @@ InvertedIndex.prototype._spliceTerm = function(doc, stats) {
 }
 
 InvertedIndex.prototype._newTerm = function(term, doc) {
-    this._terms[t] = {
+    this._terms[term] = {
         documentFrequency   : 1,
         postings            : [doc]
     };
@@ -56,7 +56,7 @@ InvertedIndex.prototype.postDocument = function(doc, terms, cb) {
 
     }
 
-    process.nextTick(cb);
+    cb && process.nextTick(cb);
 
 }
 
@@ -75,7 +75,7 @@ InvertedIndex.prototype.postDocumentUnsorted = function(doc, terms, cb) {
 
     }
 
-    process.nextTick(cb);
+    cb && process.nextTick(cb);
 
 }
 
@@ -93,14 +93,14 @@ InvertedIndex.prototype.containsTerm = function(term, cb) {
 }
 
 InvertedIndex.prototype.documentFrequencyOfTerm = function(term, cb) {
-    var result = this.containsTerm(term)
+    var result = term in this._terms
                     ? this._terms[term].documentFrequency
                     : 0;
     process.nextTick(function() { cb(result); });
 }
 
 InvertedIndex.prototype.postingsForTerm = function(term, cb) {
-    var result = this.containsTerm(term)
+    var result = term in this._terms
                     ? this._terms[term].postings
                     : [];
     process.nextTick(function() { cb(result); });
