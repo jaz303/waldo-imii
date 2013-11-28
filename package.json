@@ -1,0 +1,23 @@
+{
+  "name": "waldo-imii",
+  "version": "0.0.0",
+  "description": "In-memory inverted-index",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jaz303/waldo-imii.git"
+  },
+  "keywords": [
+    "nlp",
+    "inverted",
+    "index",
+    "full-text",
+    "search"
+  ],
+  "author": "Jason Frame <jason@onehackoranother.com> (http://jasonframe.co.uk)",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
