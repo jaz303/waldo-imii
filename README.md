@@ -13,24 +13,24 @@ Create:
 
 ## API
 
-### `imii(options)`
+#### `var index = imii(options)`
 
 Keys:
 
   * `compareDocument`: function that compares 2 documents and returns -VE/0/+VE values.
 
-### `index.postDocument(doc, terms, cb)`
+#### `index.postDocument(doc, terms, cb)`
 
-### `index.postDocumentUnsorted(doc, terms, cb)`
-
-Use this method when you're unable to present documents to the index in sorted order. Much slower.
-
-### `index.postTerm(doc, terms, cb)`
-
-### `index.postTermUnsorted(doc, terms, cb)`
+#### `index.postDocumentUnsorted(doc, terms, cb)`
 
 Use this method when you're unable to present documents to the index in sorted order. Much slower.
 
-### `index.documentFrequencyOfTerm(term, cb)`
+#### `index.postTerm(doc, terms, cb)`
 
-### `index.postingsForTerm(term, cb)`
+#### `index.postTermUnsorted(doc, terms, cb)`
+
+Use this method when you're unable to present documents to the index in sorted order. Much slower.
+
+#### `index.documentFrequencyOfTerm(term, cb)`
+
+#### `index.postingsForTerm(term, cb)`
